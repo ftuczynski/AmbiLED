@@ -118,5 +118,41 @@ namespace AmbiLED.Properties {
                 this["OFFSET_Y"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public int OFFSET_LED {
+            get {
+                return ((int)(this["OFFSET_LED"]));
+            }
+            set {
+                this["OFFSET_LED"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool MIRROR_X {
+            get {
+                return ((bool)(this["MIRROR_X"]));
+            }
+            set {
+                this["MIRROR_X"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool MIRROR_Y {
+            get {
+                return ((bool)(this["MIRROR_Y"]));
+            }
+            set {
+                this["MIRROR_Y"] = value;
+            }
+        }
     }
 }

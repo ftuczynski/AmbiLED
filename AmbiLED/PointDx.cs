@@ -13,10 +13,11 @@ namespace AmbiLED {
         public PointDx(int x, int y) {
             X = x;
             Y = y;
-            PosDx = getPos(x, y);
+            PosDx = GetPos(x, y);
         }
-        private static long getPos(int x, int y) {
-            return y * Program.ScreenWidth + x;
+        private static long GetPos(int x, int y) {
+            long pos = y * Program.ScreenWidth + x;
+            return (pos <= Program.ScreenPixels) ? (pos * 4) : -1;
         }
     }
 }

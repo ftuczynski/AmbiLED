@@ -16,6 +16,11 @@ namespace AmbiLED {
                 return Screen.PrimaryScreen.Bounds.Height;
             }
         }
+        public static int ScreenPixels {
+            get {
+                return ScreenWidth * ScreenHeight;
+            }
+        }
 
         [STAThread]
         static void Main() {
