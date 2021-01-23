@@ -12,6 +12,7 @@
         private static int offsetLED;
         private static bool mirrorX;
         private static bool mirrorY;
+        private static string comPort;
 
         public static void Refresh() {
             spotsX = Properties.Settings.Default.SPOTS_X;
@@ -25,6 +26,7 @@
             offsetLED = Properties.Settings.Default.OFFSET_LED;
             mirrorX = Properties.Settings.Default.MIRROR_X;
             mirrorY = Properties.Settings.Default.MIRROR_Y;
+            comPort = Properties.Settings.Default.COM_PORT;
         }
         public static int SpotsX { 
             get {
@@ -135,6 +137,16 @@
                 Properties.Settings.Default.MIRROR_Y = value;
                 Properties.Settings.Default.Save();
             }
+        }
+        public static string ComPort {
+            get {
+                return comPort;
+            }
+            set {
+                comPort = value;
+                Properties.Settings.Default.COM_PORT = value;
+                Properties.Settings.Default.Save();
+            } 
         }
     }
 }

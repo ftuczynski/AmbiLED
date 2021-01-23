@@ -154,5 +154,17 @@ namespace AmbiLED.Properties {
                 this["MIRROR_Y"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string COM_PORT {
+            get {
+                return ((string)(this["COM_PORT"]));
+            }
+            set {
+                this["COM_PORT"] = value;
+            }
+        }
     }
 }
