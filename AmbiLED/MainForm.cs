@@ -11,13 +11,15 @@ namespace AmbiLED {
 
         public MainForm() {
             InitializeComponent();
+            RefreshFields();
+            InitializeFieldLimits();
         }
 
         private void InitializeFieldLimits() {
-            numericUpDownSpotsX.Minimum = 1;
+            numericUpDownSpotsX.Minimum = 2;
             numericUpDownSpotsX.Maximum = 100;
 
-            numericUpDownSpotsY.Minimum = 1;
+            numericUpDownSpotsY.Minimum = 2;
             numericUpDownSpotsY.Maximum = 100;
 
             numericUpDownSpotWidth.Minimum = 10;
@@ -69,6 +71,7 @@ namespace AmbiLED {
                 comboBoxComPort.Items.Add(x);
             if (comboBoxComPort.Text.Equals("") && comboBoxComPort.Items.Count > 0)
                 comboBoxComPort.Text = (string)comboBoxComPort.Items[0];
+                
         }
         private void RefreshOverlayGraphics() {
             if (overlay != null)
@@ -169,8 +172,8 @@ namespace AmbiLED {
         }
 
         private void MainForm_Load(object sender, EventArgs e) {
-            InitializeFieldLimits();
-            RefreshFields();
+            RefreshCapturing();
+            RefreshTransfer();
             if (Settings.StartMinimized)
                 WindowState = FormWindowState.Minimized;
         }

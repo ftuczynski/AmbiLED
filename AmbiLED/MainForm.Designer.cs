@@ -95,7 +95,7 @@ namespace AmbiLED {
             this.groupBoxSpots.Location = new System.Drawing.Point(12, 12);
             this.groupBoxSpots.Name = "groupBoxSpots";
             this.groupBoxSpots.Size = new System.Drawing.Size(150, 237);
-            this.groupBoxSpots.TabIndex = 0;
+            this.groupBoxSpots.TabIndex = 30;
             this.groupBoxSpots.TabStop = false;
             this.groupBoxSpots.Text = "Spots";
             // 
@@ -170,14 +170,29 @@ namespace AmbiLED {
             // numericUpDownSpotsY
             // 
             this.numericUpDownSpotsY.Location = new System.Drawing.Point(79, 45);
+            this.numericUpDownSpotsY.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
             this.numericUpDownSpotsY.Name = "numericUpDownSpotsY";
             this.numericUpDownSpotsY.Size = new System.Drawing.Size(57, 20);
             this.numericUpDownSpotsY.TabIndex = 9;
+            this.numericUpDownSpotsY.Value = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
             this.numericUpDownSpotsY.ValueChanged += new System.EventHandler(this.numericUpDownSpotsY_ValueChanged);
             // 
             // numericUpDownSpotsX
             // 
             this.numericUpDownSpotsX.Location = new System.Drawing.Point(79, 19);
+            this.numericUpDownSpotsX.Minimum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
             this.numericUpDownSpotsX.Name = "numericUpDownSpotsX";
             this.numericUpDownSpotsX.Size = new System.Drawing.Size(57, 20);
             this.numericUpDownSpotsX.TabIndex = 8;
