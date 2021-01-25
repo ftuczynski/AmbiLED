@@ -1,12 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO.Ports;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AmbiLED {
@@ -60,6 +53,7 @@ namespace AmbiLED {
             checkBoxAutostart.Checked = Settings.Autostart;
             checkBoxStartMin.Checked = Settings.StartMinimized;
             checkBoxOverlay.Checked = Settings.OverlayActive;
+            groupBoxSpots.Text = $"Spots ({2 * (Settings.SpotsX + Settings.SpotsY) - 4} LEDs)";
             if (Settings.OutputActive)
                 buttonStart.Text = "Stop";
             else
@@ -228,10 +222,10 @@ namespace AmbiLED {
         }
 
         private void MainForm_Resize(object sender, EventArgs e) {
-            if(WindowState == FormWindowState.Normal) {
+            if (WindowState == FormWindowState.Normal) {
                 notifyIcon1.Visible = false;
             }
-            else if(WindowState == FormWindowState.Minimized) {
+            else if (WindowState == FormWindowState.Minimized) {
                 notifyIcon1.Visible = true;
                 ShowInTaskbar = false;
             }

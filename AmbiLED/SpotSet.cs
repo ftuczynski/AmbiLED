@@ -96,12 +96,5 @@
                 mirror(Settings.SpotsX + Settings.SpotsY - 2, Settings.SpotsX);
         }
         
-        private static void offset(int offset) {
-            Spot[] temp = new Spot[Spots.Length];
-            for(int i=0; i < Spots.Length; i++) {
-                temp[(i + temp.Length + offset) % temp.Length] = Spots[i];
-            }
-            Spots = temp;
-        }
     }
 }

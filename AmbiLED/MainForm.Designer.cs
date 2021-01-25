@@ -30,7 +30,7 @@ namespace AmbiLED {
         private void InitializeComponent() {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxSpots = new System.Windows.Forms.GroupBox();
             this.numericUpDownOffsetY = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownOffsetX = new System.Windows.Forms.NumericUpDown();
             this.numericUpDownBorderY = new System.Windows.Forms.NumericUpDown();
@@ -60,7 +60,7 @@ namespace AmbiLED {
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.toolStripMenuItemExit = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox1.SuspendLayout();
+            this.groupBoxSpots.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOffsetY)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOffsetX)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBorderY)).BeginInit();
@@ -74,30 +74,30 @@ namespace AmbiLED {
             this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // groupBoxSpots
             // 
-            this.groupBox1.Controls.Add(this.numericUpDownOffsetY);
-            this.groupBox1.Controls.Add(this.numericUpDownOffsetX);
-            this.groupBox1.Controls.Add(this.numericUpDownBorderY);
-            this.groupBox1.Controls.Add(this.numericUpDownBorderX);
-            this.groupBox1.Controls.Add(this.numericUpDownSpotHeight);
-            this.groupBox1.Controls.Add(this.numericUpDownSpotWidth);
-            this.groupBox1.Controls.Add(this.numericUpDownSpotsY);
-            this.groupBox1.Controls.Add(this.numericUpDownSpotsX);
-            this.groupBox1.Controls.Add(this.label8);
-            this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Controls.Add(this.label6);
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.label4);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(150, 237);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Spots";
+            this.groupBoxSpots.Controls.Add(this.numericUpDownOffsetY);
+            this.groupBoxSpots.Controls.Add(this.numericUpDownOffsetX);
+            this.groupBoxSpots.Controls.Add(this.numericUpDownBorderY);
+            this.groupBoxSpots.Controls.Add(this.numericUpDownBorderX);
+            this.groupBoxSpots.Controls.Add(this.numericUpDownSpotHeight);
+            this.groupBoxSpots.Controls.Add(this.numericUpDownSpotWidth);
+            this.groupBoxSpots.Controls.Add(this.numericUpDownSpotsY);
+            this.groupBoxSpots.Controls.Add(this.numericUpDownSpotsX);
+            this.groupBoxSpots.Controls.Add(this.label8);
+            this.groupBoxSpots.Controls.Add(this.label7);
+            this.groupBoxSpots.Controls.Add(this.label6);
+            this.groupBoxSpots.Controls.Add(this.label5);
+            this.groupBoxSpots.Controls.Add(this.label4);
+            this.groupBoxSpots.Controls.Add(this.label3);
+            this.groupBoxSpots.Controls.Add(this.label2);
+            this.groupBoxSpots.Controls.Add(this.label1);
+            this.groupBoxSpots.Location = new System.Drawing.Point(12, 12);
+            this.groupBoxSpots.Name = "groupBoxSpots";
+            this.groupBoxSpots.Size = new System.Drawing.Size(150, 237);
+            this.groupBoxSpots.TabIndex = 0;
+            this.groupBoxSpots.TabStop = false;
+            this.groupBoxSpots.Text = "Spots";
             // 
             // numericUpDownOffsetY
             // 
@@ -392,7 +392,7 @@ namespace AmbiLED {
             this.ClientSize = new System.Drawing.Size(378, 256);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxSpots);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(394, 295);
@@ -401,8 +401,8 @@ namespace AmbiLED {
             this.Text = "AmbiLED";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.Resize += new System.EventHandler(this.MainForm_Resize);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxSpots.ResumeLayout(false);
+            this.groupBoxSpots.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOffsetY)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownOffsetX)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDownBorderY)).EndInit();
@@ -422,7 +422,7 @@ namespace AmbiLED {
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxSpots;
         private System.Windows.Forms.NumericUpDown numericUpDownOffsetY;
         private System.Windows.Forms.NumericUpDown numericUpDownOffsetX;
         private System.Windows.Forms.NumericUpDown numericUpDownBorderY;
