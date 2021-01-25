@@ -127,21 +127,6 @@ namespace AmbiLED {
             RefreshOverlayGraphics();
         }
 
-        private void StopBackgroudWorkers() {
-            if (serialStream != null) {
-                serialStream.Stop();
-                serialStream = null;
-            }
-            if (overlay != null) {
-                overlay.Stop();
-                overlay = null;
-            }
-            if (screenCapture != null) {
-                screenCapture.Stop();
-                screenCapture = null;
-            }
-        }
-
         private void numericUpDownSpotsX_ValueChanged(object sender, EventArgs e) {
             Settings.SpotsX = (int)numericUpDownSpotsX.Value;
             RefreshAll();
@@ -208,6 +193,10 @@ namespace AmbiLED {
 
         private void checkBoxAutostart_CheckedChanged(object sender, EventArgs e) {
             Settings.Autostart = checkBoxAutostart.Checked;
+            if (Settings.Autostart)
+                Autostart.Add();
+            else
+                Autostart.Remove();
             RefreshAll();
         }
 

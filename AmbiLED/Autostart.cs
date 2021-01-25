@@ -1,9 +1,4 @@
 ﻿using Microsoft.Win32;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AmbiLED {
@@ -19,7 +14,7 @@ namespace AmbiLED {
                 autostartKey.SetValue("AmbiLED", Application.ExecutablePath.ToString());
         }
 
-        private static void Remove() {
+        public static void Remove() {
             if (IsStartupItem())
                 autostartKey.DeleteValue("AmbiLED", false);
         }

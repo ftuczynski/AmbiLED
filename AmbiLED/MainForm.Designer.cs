@@ -12,8 +12,10 @@ namespace AmbiLED {
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing) {
             if (disposing && (components != null)) {
-                screenCapture.Dispose();
-                serialStream.Dispose();
+                if(screenCapture!=null)
+                    screenCapture.Dispose();
+                if(serialStream!=null)
+                    serialStream.Dispose();
                 components.Dispose();
             }
             base.Dispose(disposing);
