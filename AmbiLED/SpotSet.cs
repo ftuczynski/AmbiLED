@@ -28,7 +28,7 @@
                     for (int i = 0; i < Settings.SpotsX; i++) {
                         if ((i == 0) || (j == 0) || (i == Settings.SpotsX - 1) || (j == Settings.SpotsY - 1)) {
                             x = xRemainingOffset = Settings.BorderX + Settings.OffsetX + i * xResolution + Settings.SpotWidth / 2;
-                            y = yRemainingOffset = Settings.BorderY = Settings.OffsetY + j * yResolution + Settings.SpotHeight / 2;
+                            y = yRemainingOffset = Settings.BorderY + Settings.OffsetY + j * yResolution + Settings.SpotHeight / 2;
 
                             int index = counter++;
 
@@ -48,8 +48,6 @@
                         }
                     }
                 }
-                if (Settings.OffsetLED != 0)
-                    offset(Settings.OffsetLED);
                 if (Settings.SpotsY > 1 && Settings.MirrorX)
                     mirrorX();
                 if (Settings.SpotsX > 1 && Settings.MirrorY)

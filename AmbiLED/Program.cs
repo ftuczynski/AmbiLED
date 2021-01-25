@@ -24,6 +24,7 @@ namespace AmbiLED {
 
         [STAThread]
         static void Main() {
+            Settings.Refresh();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm());

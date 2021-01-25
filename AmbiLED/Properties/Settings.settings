@@ -3,40 +3,49 @@
   <Profiles />
   <Settings>
     <Setting Name="SPOTS_X" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">2</Value>
+      <Value Profile="(Default)">31</Value>
     </Setting>
     <Setting Name="SPOTS_Y" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">2</Value>
+      <Value Profile="(Default)">20</Value>
     </Setting>
     <Setting Name="SPOT_WIDTH" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">32</Value>
+      <Value Profile="(Default)">40</Value>
     </Setting>
     <Setting Name="SPOT_HEIGHT" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">32</Value>
+      <Value Profile="(Default)">40</Value>
     </Setting>
     <Setting Name="BORDER_X" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">16</Value>
+      <Value Profile="(Default)">15</Value>
     </Setting>
     <Setting Name="BORDER_Y" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">16</Value>
+      <Value Profile="(Default)">25</Value>
     </Setting>
     <Setting Name="OFFSET_X" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
     <Setting Name="OFFSET_Y" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
-    </Setting>
-    <Setting Name="OFFSET_LED" Type="System.Int32" Scope="User">
-      <Value Profile="(Default)">0</Value>
+      <Value Profile="(Default)">-10</Value>
     </Setting>
     <Setting Name="MIRROR_X" Type="System.Boolean" Scope="User">
-      <Value Profile="(Default)">False</Value>
+      <Value Profile="(Default)">True</Value>
     </Setting>
     <Setting Name="MIRROR_Y" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">False</Value>
     </Setting>
     <Setting Name="COM_PORT" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="AUTOSTART" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="START_MINIMIZED" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="OVERLAY_ACTIVE" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="OUTPUT_ACTIVE" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
     </Setting>
   </Settings>
 </SettingsFile>

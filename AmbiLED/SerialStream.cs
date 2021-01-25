@@ -12,11 +12,11 @@ namespace AmbiLED {
         private SerialPort serialPort;
 
         public SerialStream() {
-            backgroundWorker.DoWork += backgroundWorker_DoWork;
+            backgroundWorker.DoWork += BackgroundWorker_DoWork;
             backgroundWorker.WorkerSupportsCancellation = true;
         }
 
-        private void backgroundWorker_DoWork(object sender, DoWorkEventArgs e) {
+        private void BackgroundWorker_DoWork(object sender, DoWorkEventArgs e) {
             try {
                 serialPort = new SerialPort(Settings.ComPort, 115200);
                 serialPort.Open();
@@ -42,9 +42,9 @@ namespace AmbiLED {
             int counter = MESSAGE_PREAMBLE.Length;
 
             lock (SpotSet.Lock) {
-                outputStream = new byte[(SpotSet.Spots.Length * COLORS_PER_LED) + MESSAGE_PREAMBLE.Length];
+                outputStream = new byte[MESSAGE_PREAMBLE.Length + (SpotSet.Spots.Length * COLORS_PER_LED)];
                 Buffer.BlockCopy(MESSAGE_PREAMBLE, 0, outputStream, 0, MESSAGE_PREAMBLE.Length);
-                foreach(Spot spot in SpotSet.Spots) {
+                foreach (Spot spot in SpotSet.Spots) {
                     outputStream[counter++] = spot.Brush.Color.B;
                     outputStream[counter++] = spot.Brush.Color.G;
                     outputStream[counter++] = spot.Brush.Color.R;
