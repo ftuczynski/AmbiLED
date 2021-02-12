@@ -52,7 +52,6 @@
                     mirrorX();
                 if (Settings.SpotsX > 1 && Settings.MirrorY)
                     mirrorY();
-
             }
         }
 

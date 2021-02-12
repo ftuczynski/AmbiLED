@@ -66,11 +66,8 @@ namespace AmbiLED {
                             dataStream.Read(colorBufferBottomRight, 0, 4);
 
                             AverageValues();
-
-                            //saturation threshold?
-
-                            //BGR -> RGB
-                            spot.SetColor(colorBuffer[2], colorBuffer[1], colorBuffer[0]);
+                            
+                            spot.SetColor(colorBuffer[2], colorBuffer[1], colorBuffer[0]);  //BGR -> RGB
                         }
                     }
                 }
@@ -84,7 +81,11 @@ namespace AmbiLED {
 
         private void AverageValues() {
             for(int i = 0; i < COLORS_PER_LED; i++) {
-                int temp = (int)(colorBufferTopLeft[i] + colorBufferTopRight[i] + colorBufferCenter[i] + colorBufferBottomLeft[i] + colorBufferBottomRight[i]) / 5;
+                int temp = (int)(colorBufferTopLeft[i] 
+                    + colorBufferTopRight[i] 
+                    + colorBufferCenter[i] 
+                    + colorBufferBottomLeft[i] 
+                    + colorBufferBottomRight[i]) / 5;
                 colorBuffer[i] = (byte)temp;
             }
         }

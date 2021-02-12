@@ -92,7 +92,6 @@ namespace AmbiLED {
                                 graphics.DrawRectangle(spotBorderPen, spot.RectangleBorder);
                                 graphics.FillRectangle(spot.Brush, spot.RectangleFilling);
 
-                                //TODO - better placement of first led
                                 if (spot == SpotSet.Spots[0])
                                     graphics.DrawString("1", font, solidBrush, spot.TopLeft.X, spot.TopLeft.Y);
                             }
@@ -103,7 +102,6 @@ namespace AmbiLED {
                     }
                 }
             }
-
         }
 
         private void BackgroundWorker_Completed(object sender, RunWorkerCompletedEventArgs e) {

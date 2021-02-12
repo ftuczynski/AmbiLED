@@ -23,10 +23,10 @@ namespace AmbiLED {
             numericUpDownSpotsY.Maximum = 100;
 
             numericUpDownSpotWidth.Minimum = 10;
-            numericUpDownSpotWidth.Maximum = Program.ScreenWidth;
+            numericUpDownSpotWidth.Maximum = Program.ScreenWidth / 4;
 
             numericUpDownSpotHeight.Minimum = 10;
-            numericUpDownSpotHeight.Maximum = Program.ScreenHeight;
+            numericUpDownSpotHeight.Maximum = Program.ScreenHeight / 4;
 
             numericUpDownBorderX.Minimum = 0;
             numericUpDownBorderX.Maximum = Program.ScreenWidth / 4;
